@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllArtworks } from "../../services/apiCalls";
+import IndividualArtCard from "./IndividualArtCard";
 
 export default function ArtworkPage() {
   const [artworks, setArtworks] = useState(null);
@@ -23,7 +24,7 @@ export default function ArtworkPage() {
     <div key={componentKey}>
       {artworks?.map((artwork) => (
         <div key={artwork.id}>
-          <p>{artwork.title}</p>
+          <IndividualArtCard artwork={artwork} />
         </div>
       ))}
     </div>
