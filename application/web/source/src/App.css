@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+/* NAVBAR */
+#navbarComponent a {
+  color: inherit;
+}
+
+#navbarComponent .nav-link.active {
+  color: white;
+}
