@@ -9,6 +9,7 @@ function NavbarComponent() {
       bg="dark"
       data-bs-theme="dark"
       id="navbarComponent"
+      className="mb-5"
     >
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>

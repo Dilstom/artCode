@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllArtworks } from "../../services/apiCalls";
 import IndividualArtCard from "./IndividualArtCard";
+import { Row } from "react-bootstrap";
 
 export default function ArtworkPage() {
   const [artworks, setArtworks] = useState(null);
@@ -21,12 +22,15 @@ export default function ArtworkPage() {
   }, []);
 
   return (
-    <div key={componentKey}>
-      {artworks?.map((artwork) => (
-        <div key={artwork.id}>
-          <IndividualArtCard artwork={artwork} />
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>Gallery</h1>
+      <div key={componentKey}>
+        <Row>
+          {artworks?.map((artwork) => (
+            <IndividualArtCard key={artwork.id} artwork={artwork} />
+          ))}
+        </Row>
+      </div>
+    </>
   );
 }
