@@ -9,6 +9,9 @@ const Jumbotron = () => {
       <Button href="/artworks" variant="dark">
         Explore the Artworks
       </Button>
+      <Button href="/artists" variant="dark">
+        Explore the Artworks
+      </Button>
     </div>
   );
 };
