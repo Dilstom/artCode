@@ -25,11 +25,17 @@ export default function ArtworkPage() {
     <>
       <h1>Gallery</h1>
       <div key={componentKey}>
-        <Row>
-          {artworks?.map((artwork) => (
-            <IndividualArtCard key={artwork.id} artwork={artwork} />
-          ))}
-        </Row>
+        {componentKey > 0 ? (
+          <Row>
+            {artworks?.map((artwork) => (
+              <IndividualArtCard key={artwork.id} artwork={artwork} />
+            ))}
+          </Row>
+        ) : (
+          <div className="spinner-border" role="status">
+            {/* <span class="sr-only">Loading...</span> */}
+          </div>
+        )}
       </div>
     </>
   );
