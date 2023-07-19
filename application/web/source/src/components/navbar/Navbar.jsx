@@ -12,17 +12,16 @@ function NavbarComponent() {
       className="mb-5"
     >
       <Nav.Item>
-        <Nav.Link href="/">Active</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>
+        <Nav.Link eventKey="link-1" href="/hot">
+          Hot
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-2">Link</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="disabled" disabled>
-          Disabled
+        <Nav.Link eventKey="link-2" href="/iced">
+          Iced
         </Nav.Link>
       </Nav.Item>
     </Nav>
