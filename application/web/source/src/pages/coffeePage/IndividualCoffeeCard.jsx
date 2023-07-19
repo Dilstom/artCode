@@ -1,10 +1,8 @@
 import { Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
 
 function IndividualArtCard({ artwork }) {
   const { title, description, ingredients, image, id } = artwork;
-  console.log("artwork: ", artwork);
 
   return (
     <Col xs={12} sm={6} md={4} className="my-3">
@@ -13,8 +11,12 @@ function IndividualArtCard({ artwork }) {
 
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Subtitle>{description}</Card.Subtitle>
-          {/* <Card.Text className="fst-italic">{medium_display}</Card.Text> */}
+          <Card.Subtitle className="small">{description}</Card.Subtitle>
+          <Card.Footer className="fst-italic text-muted mt-2">
+            {ingredients.map((ingredient, i) => {
+              return ingredient + " ";
+            })}
+          </Card.Footer>
         </Card.Body>
       </Card>
     </Col>

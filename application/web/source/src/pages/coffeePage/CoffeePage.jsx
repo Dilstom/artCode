@@ -16,7 +16,6 @@ export default function CoffeePage() {
           location.pathname === "/hot"
             ? await getHotCoffee()
             : await getIcedCoffee();
-        console.log(result);
         setCoffee(result);
         setComponentKey((prevKey) => prevKey + 1);
       } catch (error) {
