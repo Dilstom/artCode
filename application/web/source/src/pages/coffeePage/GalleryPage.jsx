@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllArtworks } from "../../services/apiCalls";
-import IndividualArtCard from "./IndividualArtCard";
+import IndividualArtCard from "./IndividualCoffeeCard";
 import { Row } from "react-bootstrap";
 
 export default function ArtworkPage() {

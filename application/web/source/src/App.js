@@ -4,8 +4,7 @@ import NavbarComponent from "./components/navbar/Navbar";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
-import ArtworkPage from "./pages/artworkPage/ArtworkPage";
-import ArtistsPage from "./pages/artworkPage/ArtistsPage";
+import GalleryPage from "./pages/coffeePage/GalleryPage";
 
 function App() {
   return (
@@ -14,8 +13,7 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/artworks" element={<ArtworkPage />} />
-          <Route path="/artists" element={<ArtistsPage />} />
+          <Route path="/artworks" element={<GalleryPage />} />
         </Routes>
       </Container>
     </div>
