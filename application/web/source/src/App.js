@@ -4,7 +4,8 @@ import NavbarComponent from "./components/navbar/Navbar";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
-import GalleryPage from "./pages/coffeePage/GalleryPage";
+import CoffeePage from "./pages/coffeePage/CoffeePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/artworks" element={<GalleryPage />} />
+          <Route path="/hot" element={<CoffeePage />} />
+          <Route path="/iced" element={<CoffeePage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Container>
     </div>

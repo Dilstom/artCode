@@ -6,8 +6,11 @@ const Jumbotron = () => {
     <div className="jumbotron py-5">
       <h1 className="display-4">The Most Popular Coffee Drinks</h1>
       <p className="lead"></p>
-      <Button href="/artworks" variant="dark">
-        Explore
+      <Button href="/hot" variant="dark">
+        Hot
+      </Button>
+      <Button href="/iced" variant="light">
+        Iced
       </Button>
     </div>
   );

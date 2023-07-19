@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { getAllArtworks } from "../../services/apiCalls";
+import { useLocation } from "react-router-dom";
+import { getHotCoffee, getIcedCoffee } from "../../services/apiCalls";
 import IndividualArtCard from "./IndividualCoffeeCard";
 import { Row } from "react-bootstrap";
 
-export default function ArtworkPage() {
-  const [artworks, setArtworks] = useState(null);
+export default function CoffeePage() {
+  const [coffee, setCoffee] = useState(null);
   const [componentKey, setComponentKey] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await getAllArtworks();
+        const result =
+          location.pathname === "/hot"
+            ? await getHotCoffee()
+            : await getIcedCoffee();
         console.log(result);
-        setArtworks(result);
+        setCoffee(result);
         setComponentKey((prevKey) => prevKey + 1);
       } catch (error) {
         console.error(error);
@@ -22,13 +27,15 @@ export default function ArtworkPage() {
     fetchData();
   }, []);
 
+  const getCoffeeTitle = () => (location.pathname === "/hot" ? "Hot" : "Iced");
+
   return (
     <>
-      <h1>Gallery</h1>
+      <h1> {getCoffeeTitle()} Coffee Gallery</h1>
       <div key={componentKey}>
         {componentKey > 0 ? (
           <Row>
-            {artworks?.map((artwork) => (
+            {coffee?.map((artwork) => (
               <IndividualArtCard key={artwork.id} artwork={artwork} />
             ))}
           </Row>

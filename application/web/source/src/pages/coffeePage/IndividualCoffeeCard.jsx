@@ -1,6 +1,6 @@
 import { Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-const baseUrl = process.env.REACT_APP_BASE_URL;
+import { Link } from "react-router-dom";
 
 function IndividualArtCard({ artwork }) {
   const { title, description, ingredients, image, id } = artwork;
