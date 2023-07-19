@@ -11,7 +11,8 @@ export default function ArtworkPage() {
     const fetchData = async () => {
       try {
         const result = await getAllArtworks();
-        setArtworks(result.data);
+        console.log(result);
+        setArtworks(result);
         setComponentKey((prevKey) => prevKey + 1);
       } catch (error) {
         console.error(error);

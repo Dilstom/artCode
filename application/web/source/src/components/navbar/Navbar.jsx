@@ -12,7 +12,7 @@ function NavbarComponent() {
       className="mb-5"
     >
       <Nav.Item>
-        <Nav.Link href="/home">Active</Nav.Link>
+        <Nav.Link href="/">Active</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1">Loooonger NavLink</Nav.Link>

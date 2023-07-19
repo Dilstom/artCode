@@ -4,13 +4,10 @@ import React from "react";
 const Jumbotron = () => {
   return (
     <div className="jumbotron py-5">
-      <h1 className="display-4">Art Institute of Chicago</h1>
+      <h1 className="display-4">The Most Popular Coffee Drinks</h1>
       <p className="lead"></p>
       <Button href="/artworks" variant="dark">
-        Explore the Artworks
-      </Button>
-      <Button href="/artists" variant="dark">
-        Explore the Artworks
+        Explore
       </Button>
     </div>
   );
