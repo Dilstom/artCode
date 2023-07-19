@@ -1,8 +1,8 @@
 import { Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 
-function IndividualArtCard({ artwork }) {
-  const { title, description, ingredients, image, id } = artwork;
+function IndividualArtCard({ cup }) {
+  const { title, description, ingredients, image } = cup;
 
   return (
     <Col xs={12} sm={6} md={4} className="my-3">
@@ -13,7 +13,7 @@ function IndividualArtCard({ artwork }) {
           <Card.Title>{title}</Card.Title>
           <Card.Subtitle className="small">{description}</Card.Subtitle>
           <Card.Footer className="fst-italic text-muted mt-2">
-            {ingredients.map((ingredient, i) => {
+            {ingredients.map((ingredient) => {
               return ingredient + " ";
             })}
           </Card.Footer>

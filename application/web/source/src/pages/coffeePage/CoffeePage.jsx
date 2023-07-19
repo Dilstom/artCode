@@ -34,8 +34,8 @@ export default function CoffeePage() {
       <div key={componentKey}>
         {componentKey > 0 ? (
           <Row>
-            {coffee?.map((artwork) => (
-              <IndividualArtCard key={artwork.id} artwork={artwork} />
+            {coffee?.map((cup) => (
+              <IndividualArtCard key={cup.id} cup={cup} />
             ))}
           </Row>
         ) : (
