@@ -16,7 +16,6 @@ function CoffeePageById() {
           ? await getHotCoffeeById(id)
           : await getIcedCoffeeById(id);
         setCoffee(result);
-        console.log(result);
         setComponentKey((prevKey) => prevKey + 1);
       } catch (error) {
         console.error(error);
@@ -24,7 +23,7 @@ function CoffeePageById() {
     };
 
     fetchData();
-  }, [location.pathname]);
+  }, [location.pathname, id]);
 
   return (
     <Container>

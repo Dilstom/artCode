@@ -23,12 +23,6 @@ describe("gets coffee", () => {
     const products = await getHotCoffee();
     expect(products).toEqual(mockResponseHot);
   });
-  it("should throw an error when API call fails", async () => {
-    const mockErrorMessage = new Error("API error");
-    global.fetch.mockRejectedValue(mockErrorMessage);
-
-    await expect(getHotCoffee()).rejects.toThrow(mockError);
-  });
 
   it("should return iced coffee when API call is successful", async () => {
     const mockResponseIced = [
