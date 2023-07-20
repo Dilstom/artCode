@@ -1,8 +1,10 @@
-import { Col } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import { useLocation } from "react-router-dom";
 
 function IndividualArtCard({ cup }) {
-  const { title, description, ingredients, image } = cup;
+  const { title, description, image, id } = cup;
+  const location = useLocation();
 
   return (
     <Col xs={12} sm={6} md={4} className="my-3">
@@ -12,12 +14,12 @@ function IndividualArtCard({ cup }) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Subtitle className="small">{description}</Card.Subtitle>
-          <Card.Footer className="fst-italic text-muted mt-2">
-            {ingredients.map((ingredient) => {
-              return ingredient + " ";
-            })}
-          </Card.Footer>
         </Card.Body>
+        <Card.Footer className="fst-italic text-muted mt-2">
+          <Button variant="outline-info" href={`${location.pathname}/${id}`}>
+            More Info
+          </Button>
+        </Card.Footer>
       </Card>
     </Col>
   );
