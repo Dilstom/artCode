@@ -10,6 +10,16 @@ const getHotCoffee = async () => {
   }
 };
 
+const getHotCoffeeById = async (id) => {
+  try {
+    const response = await fetch(`${baseUrl}/hot/${id}`);
+    const hotCoffee = await response.json();
+    return hotCoffee;
+  } catch (error) {
+    throw error;
+  }
+};
+
 const getIcedCoffee = async () => {
   try {
     const response = await fetch(`${baseUrl}/iced`);
@@ -20,4 +30,19 @@ const getIcedCoffee = async () => {
   }
 };
 
-module.exports = { getHotCoffee, getIcedCoffee };
+const getIcedCoffeeById = async (id) => {
+  try {
+    const response = await fetch(`${baseUrl}/iced/${id}`);
+    const icedCoffee = await response.json();
+    return icedCoffee;
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports = {
+  getHotCoffee,
+  getIcedCoffee,
+  getHotCoffeeById,
+  getIcedCoffeeById,
+};
