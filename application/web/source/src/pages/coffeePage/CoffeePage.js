@@ -24,7 +24,7 @@ export default function CoffeePage() {
     };
 
     fetchData();
-  }, []);
+  }, [location.pathname]);
 
   const getCoffeeTitle = () => (location.pathname === "/hot" ? "Hot" : "Iced");
 

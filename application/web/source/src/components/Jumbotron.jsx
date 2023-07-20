@@ -7,10 +7,10 @@ const Jumbotron = () => {
       <h1 className="display-4">The Most Popular Coffee Drinks</h1>
       <p className="lead"></p>
       <Button href="/hot" variant="dark">
-        Hot
+        Hot Coffee
       </Button>
       <Button href="/iced" variant="light">
-        Iced
+        Iced Coffee
       </Button>
     </div>
   );
